@@ -1,0 +1,2 @@
+class RadeWsdController < ApplicationController
+end
