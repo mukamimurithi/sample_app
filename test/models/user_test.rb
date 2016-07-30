@@ -1,7 +1,6 @@
 require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
-
 	def setup
 		@user= User.new(name: "carol mukami", email: "carolmurithi1994@gmail.com")
 	end
@@ -11,5 +10,4 @@ class UserTest < ActiveSupport::TestCase
 		@user.save
 		assert_not duplicate_user.valid?
 	end
-
 end
