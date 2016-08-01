@@ -4,7 +4,7 @@ class UserTest < ActiveSupport::TestCase
 
  def setup
 @user = User.new(name: "carol mukami", email: "carolmurithi1994@gmail.com",
-password: "32002892", password_confirmation: "32002892")
+password: "carolmukami", password_confirmation: "carolmukami")
 end
 test "email addresses should be unique" do
 duplicate_user = @user.dup
