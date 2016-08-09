@@ -7,7 +7,7 @@ validates :email, presence: true, length: { maximum: 255 },
 format: { with: VALID_EMAIL_REGEX },
 uniqueness: { case_sensitive: false }
 has_secure_password
-validates :password, length: { minimum: 6 }
+validates :password, length: { minimum: 6 }, allow_blank: true
 # Returns the hash digest of the given string.
 def User.digest(string)
 cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST :
@@ -28,7 +28,7 @@ end
 def authenticated?(remember_token)
 	return false if remember_digest.nil?
 
-	Ecrypt::Passord.new(remember_digest).is_password?(remember_token)
+	BCrypt::Password.new(remember_digest).is_password?(remember_token)
 end
 # forget a user.
 def forget
