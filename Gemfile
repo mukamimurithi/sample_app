@@ -5,6 +5,9 @@ source 'https://rubygems.org'
 gem 'rails', '~> 5.0.0'
 gem 'bcrypt'
 # Use sqlite3 as the database for Active Record
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
 gem 'sqlite3'
 gem 'bootstrap-sass'
 # Use Puma as the app server

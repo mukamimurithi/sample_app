@@ -14,7 +14,7 @@ end
 test "valid signup information" do
 get signup_path
 assert_difference 'User.count', 1 do
-post_via_redirect users_path, params: { user: { name: "carol mukami",
+post users_path, params: { user: { name: "carol mukami",
 	                                  email: "carolmurithi1995@gmail.com",
                                        password: "carolmukami",
                                      password_confirmation: "carolmukami" }
@@ -22,6 +22,7 @@ post_via_redirect users_path, params: { user: { name: "carol mukami",
                                  }
 
 end
+follow_redirect!
 assert_template 'users/show'
 end
 
