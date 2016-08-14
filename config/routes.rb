@@ -2,11 +2,8 @@ Rails.application.routes.draw do
   
   root 'static_pages#home'
 
-  get 'sessions/new'
-
-  get 'users/new'
-
-  patch 'update_user' => 'users#update' 
+  
+ patch 'update_user' => 'users#update' 
 
   get 'help' => 'static_pages#help'
 

@@ -12,7 +12,7 @@ end
 # Returns the current logged-in-user (if any).
 def current_user
 	if (user_id = session[:user_id])
-	@current_user ||= User.find_by(id:user_id )
+	@current_user ||= User.find_by(id: user_id )
 elsif (user_id = cookies.signed[:user_id])
 	#raise  # The tests still pass, so this branch is currently untested.
 	user = User.find_by(id: user_id)
@@ -22,10 +22,12 @@ log_in user
 end
 end
 end
-
+def current_user?(user)
+user == current_user
+end
 # Returns true if the user is logged in, false otherwise..
 def logged_in?
-	! current_user.nil?
+	!current_user.nil?
 end
 # Forgets a persistent session.
 

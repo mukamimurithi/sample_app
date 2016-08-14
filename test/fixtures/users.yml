@@ -4,6 +4,7 @@ carol:
   name: carol mukami
   email: carolmurithi1994@gmail.com 
   password_digest: <%= User.digest('password') %>
+  admin: true
   
 doreen:
   name: doreen karimi
