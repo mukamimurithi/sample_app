@@ -16,7 +16,7 @@ def current_user
 elsif (user_id = cookies.signed[:user_id])
 	#raise  # The tests still pass, so this branch is currently untested.
 	user = User.find_by(id: user_id)
-	if user && user.authenticated?(cookies[:remember_token])
+	if user && user.authenticated?(:remember, cookies[:remember_token])
 log_in user
 @current_user = user
 end
@@ -26,6 +26,16 @@ def current_user?(user)
 user == current_user
 end
 # Returns true if the user is logged in, false otherwise..
+def redirect_back_or(default)
+redirect_to(session[:forwarding_url] || default)
+session.delete(:forwarding_url)
+end
+
+# Stores the URL trying to be accessed.
+def store_location
+session[:forwarding_url] = request.url if request.get?
+end
+
 def logged_in?
 	!current_user.nil?
 end
