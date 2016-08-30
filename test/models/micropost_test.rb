@@ -1,11 +1,6 @@
 require 'test_helper'
 
 class MicropostTest < ActiveSupport::TestCase
-<<<<<<< HEAD
-  # test "the truth" do
-  #   assert true
-  # end
-=======
  def setup
        @user = users(:carol)
           # This code is not idiomatically correct.
@@ -29,5 +24,4 @@ end
 test "order should be most recent first" do
 	assert_equal Micropost.first, microposts(:most_recent)
 end
->>>>>>> user_microposts
 end
