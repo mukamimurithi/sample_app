@@ -1,14 +1,5 @@
-<<<<<<< HEAD
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  content: MyText
-  user: one
-
-two:
-  content: MyText
-  user: two
-=======
 orange:
  content: "I just ate an orange!"
  created_at: <%= 10.minutes.ago %>
@@ -24,4 +15,3 @@ cat_video:
 most_recent:
  content: "Writing a short test"
  created_at: <%= Time.zone.now %>
->>>>>>> user_microposts

@@ -1,12 +1,12 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 carol:
-  name: carol mukami
-  email: carolmurithi1994@gmail.com 
-  password_digest: <%= User.digest('password') %>
-  admin: true
-  activated: true
-  activated_at: <%= Time.zone.now %>
+ name: carol mukami
+ email: carolmurithi1994@gmail.com 
+ password_digest: <%= User.digest('password') %>
+ admin: true
+ activated: true
+ activated_at: <%= Time.zone.now %>
   
 doreen:
   name: doreen karimi
