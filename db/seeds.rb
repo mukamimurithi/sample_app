@@ -8,23 +8,18 @@ User.create!(name: "carol mukami",
 
 99.times do |n|
 name = Faker::Name.name
-
 email = "carol-#{n+1}@gmail.com"
 password = "password"
 User.create!(name: name,
-             email: email,
-             password: password,
-<<<<<<< HEAD
+            email: email,
+             password:password,
              password_confirmation: password,
              activated: true,
-             activated_at: Time.zone.now )
-=======
-             password_confirmation: password)
+             activated_at: Time.zone.now)
 
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
-  users.each { |user| user.microposts.create!(content: content) }
->>>>>>> user_microposts
+  users.each { |user| user.microposts.create!(content: content)}
 end
 end
