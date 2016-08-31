@@ -28,7 +28,7 @@ assert_difference 'Micropost.count', -1 do
 delete micropost_path(first_micropost)
 end
 # Visit a different user.
-get user_path(users(:archer))
+get user_path(users(:doreen))
 assert_select 'a', text: 'delete', count: 0
 end
 end
