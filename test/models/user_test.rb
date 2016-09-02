@@ -48,6 +48,7 @@ test "should follow and unfollow a user" do
 	assert_not carol.following? (doreen)
 	carol.follow(doreen)
 	assert carol.following?(doreen)
+	assert doreen.followers.include?(carol)
 	carol.unfollow(doreen)
 	assert_not carol.following?(doreen)
 end
