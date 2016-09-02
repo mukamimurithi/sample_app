@@ -11,7 +11,6 @@ gem 'mini_magick'
 gem 'fog'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
-gem 'sqlite3'
 gem 'bootstrap-sass'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -42,6 +41,7 @@ gem 'rails-controller-testing'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'sqlite3'
 end
 
 group :development do
