@@ -16,6 +16,8 @@ User.create!(name: name,
              password_confirmation: password,
              activated: true,
              activated_at: Time.zone.now)
+print  '.'
+end
 #microposts
 users = User.order(:created_at).take(6)
 50.times do
@@ -29,4 +31,3 @@ following = users[2..50]
 followers = users[3..40]
 following.each { |followed| user.follow(followed) }
 followers.each { |follower| follower.follow(user) }
-end
