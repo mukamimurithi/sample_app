@@ -29,8 +29,8 @@ delete 'logout' => 'sessions#destroy'
   member do
 
   get :following, :followers
-  end 
-end
+  end
+  end
 
   resources :account_activations, only: [:edit]
 
